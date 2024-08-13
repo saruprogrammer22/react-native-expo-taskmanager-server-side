@@ -45,7 +45,7 @@ const getAllTasks = async (req: Request, res: Response): Promise<Response> => {
 
         // Handle different types of errors more granularly
         if (error instanceof Error) {
-            return res.status(500).json({ status: false, error: error.message });
+            return res.status(500).json({ status: false, result: [], error: error.message });
         }
 
         return res.status(500).json({ status: false, error: "Internal server error" });

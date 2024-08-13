@@ -5,8 +5,6 @@ import authenticateToken, { validateToken } from '../../middleware/auth';
 const router = express.Router();
 // admin
 router.get("/v1/allUsers", userController.getAllUsers)
-router.delete("/v1/:userId", authenticateToken, userController.deleteByIdUser)
-
 
 // user
 router.post("/", userController.createUser)
